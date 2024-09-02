@@ -70,7 +70,7 @@ const switchAuthMode = () => {
         switchLink.href = '#';
         switchLink.onclick = () => {
             switchAuthMode();
-        };
+        };  
         authButton.onclick = handleLogin;
     } else {
         authTitle.textContent = 'Signup';
