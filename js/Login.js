@@ -3,6 +3,8 @@ const authTitle = document.getElementById('authTitle');
 const authButton = document.getElementById('authButton');
 const switchLink = document.getElementById('switchLink');
 const message = document.getElementById('message');
+const slider = document.getElementById('slider');
+const slidertext = document.getElementById('slidertext');
 
 const showMessage = (msg, type) => {
     message.textContent = msg;
@@ -89,3 +91,25 @@ switchLink.onclick = () => {
 };
 
 authButton.onclick = handleSignup;
+document.addEventListener('DOMContentLoaded', () => {
+
+    switchLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        if (slider.classList.contains('signup')) {
+            slider.classList.remove('signup');
+            slider.classList.add('login');
+            authTitle.textContent = 'Login';
+            authButton.textContent = 'Login';
+            switchLink.textContent = 'Signup';
+            slidertext.textContent = 'Welcome'
+        } else {
+            slider.classList.remove('login');
+            slider.classList.add('signup');
+            authTitle.textContent = 'Signup';
+            authButton.textContent = 'Signup';
+            switchLink.textContent = 'Login';
+            slidertext.textContent = 'Join us '
+        }
+    });
+});
