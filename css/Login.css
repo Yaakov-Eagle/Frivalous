@@ -1,12 +1,4 @@
-@keyframes toLogin {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-@keyframes toSignUp {
+@keyframes slideIn {
     from {
         transform: translateX(0);
     }
@@ -14,6 +6,16 @@
         transform: translateX(100%);
     }
 }
+
+@keyframes slideOut {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -23,25 +25,43 @@ body {
     margin: 0;
     background-color: #f4f4f4;
 }
+
 .container {
     width: 600px;
     padding: 20px;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-#slider {
-    width: 300px;
-    padding: 20px;
-    background-color: #f90101;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: relative;
     
 }
+
+#slider {
+    width: 50%;
+    padding: 20px;
+    background-color: rgba(249, 1, 1, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    transition: transform 0.5s ease;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+
+.login {
+    transform: translateX(100%);
+}
+
+.signup {
+    transform: translateX(0%);
+}
+
 .container h2 {
     margin: 0 0 15px;
 }
+
 .container input {
     width: 100%;
     padding: 10px;
@@ -49,6 +69,7 @@ body {
     border: 1px solid #ddd;
     border-radius: 5px;
 }
+
 .container button {
     width: 100%;
     padding: 10px;
@@ -59,17 +80,11 @@ body {
     font-size: 16px;
     cursor: pointer;
 }
+
 .container button:hover {
     background-color: #0056b3;
 }
-.toLeft{
-    animation:toLogin 1.5s ease-in infinite;
-}
-.toRight{
-    animation:toSignUp 1.5s ease-in infinite;
-  
 
-}
 .message {
     color: red;
     font-size: 14px;
