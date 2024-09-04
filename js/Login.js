@@ -5,7 +5,7 @@ const switchLink = document.getElementById('switchLink');
 const message = document.getElementById('message');
 const slider = document.getElementById('slider');
 const slidertext = document.getElementById('slidertext');
-
+const switchAuth = document.getElementById('switchAuth')
 const showMessage = (msg, type) => {
     message.textContent = msg;
     message.style.color = type === 'error' ? 'red' : 'green';
@@ -99,17 +99,41 @@ document.addEventListener('DOMContentLoaded', () => {
         if (slider.classList.contains('signup')) {
             slider.classList.remove('signup');
             slider.classList.add('login');
+            authTitle.classList.remove('signupText');
+            message.classList.remove('signupText');
+            password.classList.remove('signupFields');
+            username.classList.remove('signupFields');
+           authButton.classList.remove('signupFields');
+            authTitle.classList.add('loginText');
+            message.classList.add('loginText');
+            password.classList.add('loginText');
+            username.classList.add('loginText');
+           authButton.classList.add('loginText');
             authTitle.textContent = 'Login';
             authButton.textContent = 'Login';
             switchLink.textContent = 'Signup';
-            slidertext.textContent = 'Welcome'
-        } else {
+            slidertext.textContent = 'Welcome to Frivalous';
+              switchAuth.textContent = 'Not a Frivalasion?'
+
+         }
+          else {
             slider.classList.remove('login');
             slider.classList.add('signup');
+            authTitle.classList.remove('loginText');
+            message.classList.remove('loginText');
+            password.classList.remove('loginText');
+            username.classList.remove('loginText');
+           authButton.classList.remove('loginText');
+            authTitle.classList.add('signupText');
+            message.classList.add('signupText');
+            password.classList.add('signupFields');
+            username.classList.add('signupFields');
+           authButton.classList.add('signupFields');
             authTitle.textContent = 'Signup';
             authButton.textContent = 'Signup';
             switchLink.textContent = 'Login';
-            slidertext.textContent = 'Join us '
+            switchAuth.textContent = 'Already a Frivalasion?'
+            slidertext.textContent = 'Become a Frivalasion Today!!';
         }
     });
 });

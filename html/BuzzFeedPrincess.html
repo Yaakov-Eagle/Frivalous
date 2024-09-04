@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disney Princess Quiz</title>
+    <link rel="stylesheet" href="../css/BF.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Which Disney Princess Are You?</h1>
+        <form id="quizForm">
+            <div class="question">
+                <p>What's your favorite activity?</p>
+                <label><input type="radio" name="activity" value="A"> Singing</label><br>
+                <label><input type="radio" name="activity" value="B"> Reading</label><br>
+                <label><input type="radio" name="activity" value="C"> Adventuring</label><br>
+                <label><input type="radio" name="activity" value="D"> Cooking</label>
+            </div>
+
+            <div class="question">
+                <p>What's your ideal vacation spot?</p>
+                <label><input type="radio" name="vacation" value="A"> A royal palace</label><br>
+                <label><input type="radio" name="vacation" value="B"> A quiet village</label><br>
+                <label><input type="radio" name="vacation" value="C"> A magical forest</label><br>
+                <label><input type="radio" name="vacation" value="D"> A bustling city</label>
+            </div>
+
+            <button type="button" onclick="submitQuiz()">Find Out!</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script src="../js/BF.js"></script>
+</body>
+</html>
