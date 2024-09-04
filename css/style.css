@@ -3,7 +3,8 @@
     margin: 0%;
 }
 body{
-    background-color: peachpuff;
+    background-image: url(../imgs/91657.jpg);
+    background-size:cover;
 }
 @keyframes scrollScreen {
     to
