@@ -1,9 +1,16 @@
 
-const Trial = () => {
+import styled from '@emotion/styled'
 
+
+const Fancy = styled('div')`
+  color: hotpink;
+`
+
+const Trial = () => {
+const t =1;
 
     return (
-        <>hello thefre</>
+        <Fancy>{t}</Fancy>
     )
 }
 
