@@ -6,17 +6,17 @@ function submitQuiz() {
         answers[key] = value;
     });
 
-    if (!answers.activity || !answers.vacation) {
+    if (!answers.activity || !answers.vacation || !answers.pet || !answers.man || !answers.sleep) {
         document.getElementById('result').textContent = 'Please answer all questions!';
         return;
     }
 
     // Basic scoring logic
     const scores = {
-        A: 0,
-        B: 0,
-        C: 0,
-        D: 0
+        Mulan: 0,
+        Bell: 0,
+        Cind: 0,
+        Ariel: 0
     };
 
     for (const answer of Object.values(answers)) {
@@ -29,17 +29,17 @@ function submitQuiz() {
 
     let resultText = '';
     switch (princess) {
-        case 'A':
+        case 'Cind':
             resultText = 'You are Cinderella! You have a kind heart and a magical touch.';
             break;
-        case 'B':
+        case 'Bell':
             resultText = 'You are Belle! You love books and find beauty in everything.';
             break;
-        case 'C':
+        case 'Ariel':
             resultText = 'You are Ariel! You are adventurous and love discovering new things.';
             break;
-        case 'D':
-            resultText = 'You are Tiana! You are hardworking and passionate about your dreams.';
+        case 'Mulan':
+            resultText = 'You are Mulan! You are hardworking and passionate about your dreams, you can achieve anything you put your mind to and would make the most amazing wife. you are strong and brilliant, caring , and have a really hot husband.';
             break;
         default:
             resultText = 'Something went wrong!';
@@ -47,3 +47,4 @@ function submitQuiz() {
 
     document.getElementById('result').textContent = resultText;
 }
+

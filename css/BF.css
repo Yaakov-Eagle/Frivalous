@@ -4,8 +4,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     margin: 0;
+}
+p{
+    width:100%;
+    background-color: #0056b3;
+    color: #fff;
+    font-size:50px;
+    font-family: fantasy;
+    height: 10%;
+    position: relative;
+    padding:5%; 
+    border-radius:15px;
+    text-align: center;
 }
 
 .quiz-container {
@@ -15,6 +26,10 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 600px;
+    height:fit-content;
+    position:relative;
+   
+    
 }
 
 h1 {
@@ -23,12 +38,24 @@ h1 {
 }
 
 .question {
+    display: flex;
+    flex-wrap: wrap;
     margin-bottom: 20px;
+    gap: 10px;
+position: relative;
 }
 
 label {
-    display: block;
+    position: relative;
+    height: 200px;
+    width: 45%;
+    border:1px solid red;  
     margin-bottom: 10px;
+    background-color: aqua;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 button {
@@ -39,6 +66,22 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+}
+input[type="radio"]{
+    appearance: none;
+}
+
+label:has(input[type="radio"]:checked){
+    background-color: #2e7fcf;
+}
+
+label:has(input[type="radio"]:checked)~ label{
+    opacity: 20%;
+}
+
+img{
+    height:100px;
+    width: 100px;
 }
 
 button:hover {
